@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="웹 검색 결과를 로컬 AI가 의미별 폴더와 계층으로 정리하는 macOS 및 Windows 데스크톱 앱"
+    />
+    <meta name="theme-color" content="#111214" />
+    <meta property="og:title" content="OneSearch - Local AI Search Organizer" />
+    <meta
+      property="og:description"
+      content="웹 검색 결과를 로컬 AI가 의미별 폴더와 계층으로 정리하세요."
+    />
+    <meta property="og:image" content="https://onesearch-download.adultdongsoo0516.chatgpt.site/og-v2.png" />
+    <title>OneSearch - 로컬 AI 검색 정리 앱</title>
+    <link rel="icon" href="https://onesearch-download.adultdongsoo0516.chatgpt.site/onesearch-icon.png" />
+    <link rel="apple-touch-icon" href="https://onesearch-download.adultdongsoo0516.chatgpt.site/onesearch-icon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="OneSearch 홈">
+        <img src="https://onesearch-download.adultdongsoo0516.chatgpt.site/onesearch-icon.png" width="38" height="38" alt="" />
+        <span>OneSearch</span>
+      </a>
+      <nav class="desktop-nav" aria-label="주요 메뉴">
+        <a href="#how"><span data-ko="작동 방식" data-en="How it works">작동 방식</span></a>
+        <button class="nav-button" type="button" data-open-guide>
+          <span data-ko="사용 가이드" data-en="Guide">사용 가이드</span>
+        </button>
+        <a href="#faq">Q&amp;A</a>
+        <a data-live-path="/community" href="#">Community</a>
+        <a href="#pricing">Pro</a>
+        <a class="nav-download" href="#download">
+          <span data-ko="다운로드" data-en="Download">다운로드</span>
+        </a>
+      </nav>
+      <div class="header-tools">
+        <div class="language-switcher" aria-label="언어 선택">
+          <button class="active" type="button" data-language="ko" aria-pressed="true">KO</button>
+          <button type="button" data-language="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" title="메뉴">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav" id="mobile-menu" aria-label="모바일 메뉴">
+        <a href="#how"><span data-ko="작동 방식" data-en="How it works">작동 방식</span></a>
+        <button type="button" data-open-guide>
+          <span data-ko="사용 가이드" data-en="Guide">사용 가이드</span>
+        </button>
+        <a href="#faq">Q&amp;A</a>
+        <a data-live-path="/community" href="#">Community</a>
+        <a href="#pricing">Pro</a>
+        <a href="#download"><span data-ko="다운로드" data-en="Download">다운로드</span></a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">LOCAL AI SEARCH / VERSION 1.0.0</p>
+          <h1 id="hero-title">OneSearch</h1>
+          <p
+            class="hero-description"
+            data-ko="웹 검색 결과를 로컬 AI가 의미별 폴더와 계층으로 정리합니다. 필요한 페이지를 검색 화면을 떠나지 않고 독립 탭에서 비교하세요."
+            data-en="Local AI organizes web results into semantic folders and hierarchies. Compare pages in separate tabs without leaving your search workspace."
+          >
+            웹 검색 결과를 로컬 AI가 의미별 폴더와 계층으로 정리합니다. 필요한 페이지를 검색 화면을 떠나지 않고 독립 탭에서 비교하세요.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#download">
+              <span data-ko="무료로 다운로드" data-en="Download for free">무료로 다운로드</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+            <a class="secondary-button" href="#how">
+              <span data-ko="작동 방식 보기" data-en="See how it works">작동 방식 보기</span>
+            </a>
+          </div>
+          <ul class="hero-proof" aria-label="제품 주요 정보">
+            <li data-ko="무료 4B 모델" data-en="Free 4B model">무료 4B 모델</li>
+            <li data-ko="AI 분석은 내 컴퓨터에서" data-en="AI runs on your computer">AI 분석은 내 컴퓨터에서</li>
+            <li>macOS · Windows</li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <img
+            src="https://onesearch-download.adultdongsoo0516.chatgpt.site/og-v2.png"
+            width="1200"
+            height="630"
+            alt="OneSearch 앱에서 AI가 검색 결과를 폴더로 정리한 화면"
+          />
+        </div>
+      </section>
+
+      <section class="how-section" id="how" aria-labelledby="how-title">
+        <header class="section-heading">
+          <p>HOW IT WORKS</p>
+          <h2
+            id="how-title"
+            data-ko="검색 링크를 폴더 구조로 바꾸세요"
+            data-en="Turn search links into a folder structure"
+          >
+            검색 링크를 폴더 구조로 바꾸세요
+          </h2>
+          <span
+            data-ko="웹 결과를 수집하고, 로컬 AI가 의미별 폴더로 정리한 뒤, 필요한 페이지를 OneSearch 안에서 비교합니다."
+            data-en="Collect web results, organize them with local AI, and compare the pages you need inside OneSearch."
+          >
+            웹 결과를 수집하고, 로컬 AI가 의미별 폴더로 정리한 뒤, 필요한 페이지를 OneSearch 안에서 비교합니다.
+          </span>
+        </header>
+
+        <div class="steps" role="list">
+          <article role="listitem">
+            <span>01</span>
+            <div class="step-icon" aria-hidden="true">⌕</div>
+            <h3 data-ko="웹 검색" data-en="Search the web">웹 검색</h3>
+            <p
+              data-ko="평소처럼 검색어를 입력하면 여러 웹 결과를 한 번에 수집합니다."
+              data-en="Enter a query as usual and collect multiple web results at once."
+            >
+              평소처럼 검색어를 입력하면 여러 웹 결과를 한 번에 수집합니다.
+            </p>
+          </article>
+          <article role="listitem">
+            <span>02</span>
+            <div class="step-icon" aria-hidden="true">≡</div>
+            <h3 data-ko="로컬 AI 정리" data-en="Organize locally">로컬 AI 정리</h3>
+            <p
+              data-ko="4B, 8B 또는 14B 모델이 결과의 의미를 분석하고 주제별 폴더를 만듭니다."
+              data-en="A 4B, 8B, or 14B model analyzes meaning and creates topic folders."
+            >
+              4B, 8B 또는 14B 모델이 결과의 의미를 분석하고 주제별 폴더를 만듭니다.
+            </p>
+          </article>
+          <article role="listitem">
+            <span>03</span>
+            <div class="step-icon" aria-hidden="true">↗</div>
+            <h3 data-ko="앱 안에서 비교" data-en="Compare in the app">앱 안에서 비교</h3>
+            <p
+              data-ko="검색 화면을 유지한 채 필요한 페이지를 독립 탭으로 열어 비교합니다."
+              data-en="Open pages in separate tabs and compare them without losing your search."
+            >
+              검색 화면을 유지한 채 필요한 페이지를 독립 탭으로 열어 비교합니다.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="download-section" id="download" aria-labelledby="download-title">
+        <header class="section-heading">
+          <p>PLATFORM</p>
+          <h2 id="download-title" data-ko="운영체제를 선택하세요" data-en="Choose your operating system">
+            운영체제를 선택하세요
+          </h2>
+        </header>
+
+        <div class="platform-grid">
+          <article class="platform-panel mac" data-platform-card="mac">
+            <div class="platform-topline">
+              <span class="platform-icon" aria-hidden="true">⌘</span>
+              <span class="recommendation" data-ko="이 기기에 추천" data-en="Recommended">이 기기에 추천</span>
+              <span>VERSION 1.0.0</span>
+            </div>
+            <h3>macOS</h3>
+            <p>Apple Silicon · DMG</p>
+            <dl>
+              <div><dt data-ko="요구 사항" data-en="Requirements">요구 사항</dt><dd data-ko="macOS 11 이상" data-en="macOS 11 or later">macOS 11 이상</dd></div>
+              <div><dt data-ko="파일 크기" data-en="File size">파일 크기</dt><dd>41 MB</dd></div>
+              <div><dt data-ko="첫 AI 설정" data-en="First AI setup">첫 AI 설정</dt><dd data-ko="약 2.8GB 별도" data-en="About 2.8 GB separately">약 2.8GB 별도</dd></div>
+            </dl>
+            <p class="verified"><span aria-hidden="true">✓</span><span data-ko="DMG·arm64 앱 기동 검증 완료" data-en="DMG and arm64 launch verified">DMG·arm64 앱 기동 검증 완료</span></p>
+            <a
+              class="download-button"
+              data-download="mac"
+              href="https://onesearch-download.adultdongsoo0516.chatgpt.site/api/download/mac?v=64dc7a7c9c22"
+            >
+              <span data-ko="macOS용 다운로드" data-en="Download for macOS">macOS용 다운로드</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+          </article>
+
+          <article class="platform-panel windows" data-platform-card="windows">
+            <div class="platform-topline">
+              <span class="platform-icon" aria-hidden="true">⊞</span>
+              <span class="recommendation" data-ko="이 기기에 추천" data-en="Recommended">이 기기에 추천</span>
+              <span>VERSION 1.0.0</span>
+            </div>
+            <h3>Windows</h3>
+            <p>64-bit · EXE</p>
+            <dl>
+              <div><dt data-ko="요구 사항" data-en="Requirements">요구 사항</dt><dd>Windows 10/11</dd></div>
+              <div><dt data-ko="파일 크기" data-en="File size">파일 크기</dt><dd>1,270 MB</dd></div>
+              <div><dt data-ko="첫 AI 설정" data-en="First AI setup">첫 AI 설정</dt><dd data-ko="Ollama 통합" data-en="Ollama included">Ollama 통합</dd></div>
+            </dl>
+            <p class="verified"><span aria-hidden="true">✓</span><span data-ko="아이콘·Ollama·설치 파일 구조 검증 완료" data-en="Icon, Ollama, and installer verified">아이콘·Ollama·설치 파일 구조 검증 완료</span></p>
+            <a
+              class="download-button"
+              data-download="windows"
+              href="https://onesearch-download.adultdongsoo0516.chatgpt.site/api/download/windows?v=31c05e72e28e"
+            >
+              <span data-ko="Windows용 다운로드" data-en="Download for Windows">Windows용 다운로드</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="pricing-section" id="pricing" aria-labelledby="pricing-title">
+        <header class="section-heading">
+          <p>FOUNDING PRO</p>
+          <h2 id="pricing-title" data-ko="검색 결과를 지식 자산으로 보관하세요" data-en="Keep search results as reusable knowledge">
+            검색 결과를 지식 자산으로 보관하세요
+          </h2>
+          <span
+            data-ko="무료 검색 기능은 계속 사용할 수 있습니다. 더 정교한 로컬 AI와 작업 보관이 필요한 경우에만 한 번 구매하세요."
+            data-en="Core search remains free. Make a one-time purchase only when you need more capable local AI and a saved research library."
+          >
+            무료 검색 기능은 계속 사용할 수 있습니다. 더 정교한 로컬 AI와 작업 보관이 필요한 경우에만 한 번 구매하세요.
+          </span>
+        </header>
+
+        <div class="pricing-grid">
+          <article class="price-panel">
+            <span>FREE</span>
+            <h3 data-ko="무료" data-en="Free">무료</h3>
+            <strong>₩0</strong>
+            <ul>
+              <li data-ko="AI 의미별 폴더 정리" data-en="Semantic AI folders">AI 의미별 폴더 정리</li>
+              <li data-ko="빠른 4B 로컬 AI" data-en="Fast 4B local AI">빠른 4B 로컬 AI</li>
+              <li data-ko="앱 내부 웹 탐색 탭" data-en="In-app web browsing tabs">앱 내부 웹 탐색 탭</li>
+              <li data-ko="로컬 AI 처리" data-en="Local AI processing">로컬 AI 처리</li>
+            </ul>
+            <a class="price-action free-action" href="#download" data-ko="무료 다운로드" data-en="Free download">무료 다운로드</a>
+          </article>
+          <article class="price-panel pro">
+            <span data-ko="FOUNDING PRO · 1회 구매" data-en="FOUNDING PRO · ONE-TIME">FOUNDING PRO · 1회 구매</span>
+            <h3>OneSearch Pro</h3>
+            <strong>₩19,900</strong>
+            <ul>
+              <li data-ko="8B·14B 고급 로컬 AI 선택" data-en="Choose advanced 8B or 14B local AI">8B·14B 고급 로컬 AI 선택</li>
+              <li data-ko="검색 결과 보관함" data-en="Saved search library">검색 결과 보관함</li>
+              <li data-ko="Markdown·CSV 내보내기" data-en="Markdown and CSV export">Markdown·CSV 내보내기</li>
+              <li data-ko="최대 3대 기기" data-en="Up to 3 devices">최대 3대 기기</li>
+              <li data-ko="OneSearch 1.x 업데이트" data-en="OneSearch 1.x updates">OneSearch 1.x 업데이트</li>
+            </ul>
+            <a class="price-action pro-action" data-live-anchor="pricing" href="#">
+              <span data-ko="Founding Pro 구매" data-en="Buy Founding Pro">Founding Pro 구매</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq-section" id="faq" aria-labelledby="faq-title">
+        <header class="section-heading">
+          <p>Q&amp;A</p>
+          <h2 id="faq-title" data-ko="자주 묻는 질문" data-en="Frequently asked questions">자주 묻는 질문</h2>
+        </header>
+        <div class="faq-list">
+          <details>
+            <summary data-ko="인터넷 없이도 사용할 수 있나요?" data-en="Can I use OneSearch without the internet?">인터넷 없이도 사용할 수 있나요?</summary>
+            <p
+              data-ko="AI 분석은 내 컴퓨터에서 처리됩니다. 새로운 웹 결과를 검색할 때는 인터넷 연결이 필요합니다."
+              data-en="AI analysis runs on your computer. An internet connection is required to fetch new web results."
+            >
+              AI 분석은 내 컴퓨터에서 처리됩니다. 새로운 웹 결과를 검색할 때는 인터넷 연결이 필요합니다.
+            </p>
+          </details>
+          <details>
+            <summary data-ko="Free와 Pro의 차이는 무엇인가요?" data-en="What is the difference between Free and Pro?">Free와 Pro의 차이는 무엇인가요?</summary>
+            <p
+              data-ko="Free는 빠른 4B 모델을 사용합니다. Pro는 8B 또는 14B 모델, 검색 보관함, Markdown·CSV 내보내기와 최대 3대 기기 사용을 제공합니다."
+              data-en="Free uses the fast 4B model. Pro adds 8B or 14B models, a saved library, Markdown and CSV export, and activation on up to three devices."
+            >
+              Free는 빠른 4B 모델을 사용합니다. Pro는 8B 또는 14B 모델, 검색 보관함, Markdown·CSV 내보내기와 최대 3대 기기 사용을 제공합니다.
+            </p>
+          </details>
+          <details>
+            <summary data-ko="설치할 때 보안 경고가 표시됩니다." data-en="Why do I see a security warning during installation?">설치할 때 보안 경고가 표시됩니다.</summary>
+            <p
+              data-ko="공식 코드 서명 전에는 Gatekeeper 또는 SmartScreen 안내가 표시될 수 있습니다. 공식 다운로드 버튼에서 받은 파일인지 확인하세요."
+              data-en="Gatekeeper or SmartScreen may appear until official code signing is complete. Confirm that you downloaded the file from the official button."
+            >
+              공식 코드 서명 전에는 Gatekeeper 또는 SmartScreen 안내가 표시될 수 있습니다. 공식 다운로드 버튼에서 받은 파일인지 확인하세요.
+            </p>
+          </details>
+          <details>
+            <summary data-ko="결제 후 라이선스는 어디에서 확인하나요?" data-en="Where do I find my license after payment?">결제 후 라이선스는 어디에서 확인하나요?</summary>
+            <p
+              data-ko="결제 완료 화면에서 라이선스 키가 발급됩니다. OneSearch의 열쇠 아이콘을 눌러 등록하세요."
+              data-en="Your license key appears after checkout. Open OneSearch and use the key icon to activate it."
+            >
+              결제 완료 화면에서 라이선스 키가 발급됩니다. OneSearch의 열쇠 아이콘을 눌러 등록하세요.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <a class="brand" href="#top">
+          <img src="https://onesearch-download.adultdongsoo0516.chatgpt.site/onesearch-icon.png" width="34" height="34" alt="" />
+          <span>OneSearch 1.0.0</span>
+        </a>
+        <p data-ko="로컬 AI로 검색 결과를 이해하기 쉬운 구조로 정리하세요." data-en="Organize web results into a structure you can understand with local AI.">
+          로컬 AI로 검색 결과를 이해하기 쉬운 구조로 정리하세요.
+        </p>
+      </div>
+      <nav aria-label="정책 및 지원">
+        <a data-live-path="/terms" href="#" data-ko="이용약관" data-en="Terms">이용약관</a>
+        <a data-live-path="/privacy" href="#" data-ko="개인정보 처리방침" data-en="Privacy">개인정보 처리방침</a>
+        <a data-live-path="/refund" href="#" data-ko="환불 정책" data-en="Refund policy">환불 정책</a>
+        <a data-live-path="/support" href="#" data-ko="고객지원" data-en="Support">고객지원</a>
+        <a data-live-path="/community" href="#" data-ko="커뮤니티" data-en="Community">커뮤니티</a>
+        <a href="https://github.com/Won-Dong-Soo/OneSearch-website" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </footer>
+
+    <dialog class="guide-dialog" aria-labelledby="guide-title">
+      <div class="guide-header">
+        <div>
+          <p>GETTING STARTED</p>
+          <h2 id="guide-title" data-ko="OneSearch 사용 가이드" data-en="OneSearch guide">OneSearch 사용 가이드</h2>
+        </div>
+        <button type="button" data-close-guide aria-label="닫기">×</button>
+      </div>
+      <div class="guide-content">
+        <article>
+          <span>01</span>
+          <h3 data-ko="설치" data-en="Install">설치</h3>
+          <p data-ko="운영체제에 맞는 파일을 받은 뒤 macOS는 DMG, Windows는 EXE 설치 안내를 따르세요." data-en="Download the correct file, then follow the DMG steps on macOS or the EXE installer on Windows.">
+            운영체제에 맞는 파일을 받은 뒤 macOS는 DMG, Windows는 EXE 설치 안내를 따르세요.
+          </p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3 data-ko="AI 모델 준비" data-en="Prepare the AI model">AI 모델 준비</h3>
+          <p data-ko="첫 실행 준비 창에서 자동 설치를 누르세요. Free는 4B, Pro는 8B 또는 14B를 선택할 수 있습니다." data-en="Choose automatic setup on first launch. Free uses 4B; Pro can choose 8B or 14B.">
+            첫 실행 준비 창에서 자동 설치를 누르세요. Free는 4B, Pro는 8B 또는 14B를 선택할 수 있습니다.
+          </p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3 data-ko="검색하고 정리" data-en="Search and organize">검색하고 정리</h3>
+          <p data-ko="검색어를 입력하면 결과가 수집되고 로컬 AI가 의미별 폴더를 만듭니다." data-en="Enter a query to collect results and organize them into semantic folders with local AI.">
+            검색어를 입력하면 결과가 수집되고 로컬 AI가 의미별 폴더를 만듭니다.
+          </p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3 data-ko="탭에서 비교" data-en="Compare in tabs">탭에서 비교</h3>
+          <p data-ko="결과를 독립 탭으로 열어 비교하고, Pro에서는 보관하거나 Markdown·CSV로 내보내세요." data-en="Open results in separate tabs. With Pro, save them or export to Markdown and CSV.">
+            결과를 독립 탭으로 열어 비교하고, Pro에서는 보관하거나 Markdown·CSV로 내보내세요.
+          </p>
+        </article>
+      </div>
+    </dialog>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

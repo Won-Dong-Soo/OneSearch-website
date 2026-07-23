@@ -1,8 +1,16 @@
-# vinext-starter
+# OneSearch Website
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Official website and download portal for OneSearch, a local AI search organizer
+for macOS and Windows.
+
+## Live Websites
+
+- Production: <https://onesearch-download.adultdongsoo0516.chatgpt.site/>
+- GitHub Pages: <https://won-dong-soo.github.io/OneSearch-website/>
+
+The production site provides downloads, Paddle checkout, license delivery,
+community, support, and administration. GitHub Pages provides the public static
+site and links server-backed actions to the production service.
 
 ## Prerequisites
 
@@ -16,16 +24,20 @@ npm run dev
 npm run build
 ```
 
+To preview the GitHub Pages version, open `github-pages/index.html` in a browser.
+Changes under `github-pages/` are automatically published by
+`.github/workflows/pages.yml` after they are pushed to `main`.
+
 This starter does not use `wrangler.jsonc`.
 
-## Included Shape
+## Project Structure
 
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+- `app/`: production website and API routes
+- `db/`: D1-backed license, community, promotion, and administration data
+- `public/`: shared production assets and release metadata
+- `github-pages/`: static GitHub Pages website
+- `.github/workflows/pages.yml`: GitHub Pages deployment workflow
+- `.openai/hosting.json`: production D1 and R2 bindings
 
 ## Workspace Auth Headers
 
