@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1784534360502,
+      "tag": "0000_broad_sphinx",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1784623657138,
+      "tag": "0001_windy_skin",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1784679439414,
+      "tag": "0002_deep_rogue",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1784692486844,
+      "tag": "0003_dazzling_texas_twister",
+      "breakpoints": true
+    }
+  ]
+}

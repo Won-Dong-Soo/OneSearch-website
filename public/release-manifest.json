@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "publishedAt": "2026-07-23",
+  "releases": {
+    "mac": {
+      "filename": "OneSearch_1.0.0_aarch64.dmg",
+      "bytes": 42804306,
+      "sha256": "64dc7a7c9c2204c7defca0247bb105fdd7640bc96a82ec82585783d0d83fea05",
+      "verification": "DMG·arm64 앱 기동 검증 완료"
+    },
+    "windows": {
+      "filename": "OneSearch_1.0.0_x64-setup.exe",
+      "bytes": 1331526186,
+      "sha256": "31c05e72e28e10e6e1ea82644e2b90c662562cee52296bd80026867a113eae3f",
+      "verification": "OneSearch 아이콘·Ollama 런타임 통합·설치 파일 구조·해시 검증 완료"
+    }
+  }
+}
